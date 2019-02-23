@@ -110,6 +110,10 @@ PRODUCT_PACKAGES += \
 # Bootanimation	
 PRODUCT_COPY_FILES += \
 	vendor/aosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip		
+	
+#Omni package
+PRODUCT_PACKAGES += \
+    OmniStyle 
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -152,9 +156,6 @@ include vendor/aosp/config/branding.mk
 
 # OTA
 include vendor/aosp/config/ota.mk
-
-# GApps
-# include vendor/gapps/config.mk
 
 # Pixel Style
 include vendor/pixelstyle/config.mk
