@@ -106,6 +106,10 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Optional packages
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker
+	
+# Bootanimation	
+PRODUCT_COPY_FILES += \
+	vendor/aosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip		
 
 # Charger
 PRODUCT_PACKAGES += \
