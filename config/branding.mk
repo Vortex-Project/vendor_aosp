@@ -13,13 +13,13 @@ CUSTOM_PLATFORM_VERSION := 9.0
 
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-CUSTOM_VERSION := PixelExperience_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
+CUSTOM_VERSION := Vortex-OS_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
 CUSTOM_VERSION_PROP := Pie
-ROM_FINGERPRINT := PixelExperience/$(CUSTOM_PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
+ROM_FINGERPRINT := Vortex-OS/$(CUSTOM_PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
 
 CUSTOM_PROPERTIES := \
-    org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
-    org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
-    org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pixelexperience.build_type=$(CUSTOM_BUILD_TYPE) \
-    org.pixelexperience.fingerprint=$(ROM_FINGERPRINT)
+    org.vortex.version=$(CUSTOM_VERSION_PROP) \
+    org.vortex.build_date=$(CUSTOM_BUILD_DATE) \
+    org.vortex.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
+    org.vortex.build_type=$(CUSTOM_BUILD_TYPE) \
+    org.vortex.fingerprint=$(ROM_FINGERPRINT)
