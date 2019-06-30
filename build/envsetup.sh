@@ -9,7 +9,7 @@ Additional functions:
 - pixelrebase:     Rebase a Gerrit change and push it again.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
-- githubremote:    Add git remote for PixelExperience Github.
+- gitlabremote:    Add git remote for Vortex OS Gitlab.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
@@ -304,20 +304,20 @@ function cafremote()
     echo "Remote 'caf' created"
 }
 
-function githubremote()
+function gitlabremote()
 {
     if ! git rev-parse --git-dir &> /dev/null
     then
         echo ".git directory not found. Please run this from the root directory of the Android repository you wish to set up."
         return 1
     fi
-    git remote rm github 2> /dev/null
+    git remote rm gitlab 2> /dev/null
     local REMOTE=$(git config --get remote.vortex.projectname)
 
     local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
 
-    git remote add github https://github.com/vortex-project/$PROJECT
-    echo "Remote 'github' created"
+    git remote add gitlab https://gitlab.com/proyecto-vortex/$PROJECT
+    echo "Remote 'gitlab' created"
 }
 
 function installboot()
