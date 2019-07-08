@@ -1,6 +1,7 @@
 # Set all versions
 CUSTOM_BUILD_TYPE ?= UNOFFICIAL
 
+VORTEX_VERSION_NUMBER := 9.7.7
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
 CUSTOM_DATE_DAY := $(shell date -u +%d)
@@ -24,6 +25,7 @@ ROM_FINGERPRINT := Vortex-OS/$(CUSTOM_PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/
 endif
 
 CUSTOM_PROPERTIES := \
+    ro.vortex.version=$(VORTEX_VERSION_NUMBER) \
     org.vortex.version=$(CUSTOM_VERSION_PROP) \
     org.vortex.build_date=$(CUSTOM_BUILD_DATE) \
     org.vortex.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
